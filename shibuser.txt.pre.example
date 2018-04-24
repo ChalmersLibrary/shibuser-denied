@@ -1,0 +1,2 @@
+If !(auth:issuer eq "https://issuer.url");
+   Deny unaffiliated.html

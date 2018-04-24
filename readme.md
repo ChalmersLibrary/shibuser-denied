@@ -8,10 +8,13 @@
 - shibuser.denied
     - Containg usernames to be blocked. One username per line
 
+All files should have an empty line as the last line
+
 ### shibuser.txt.pre example
 ```
 If !(auth:issuer eq "https://issuer.url");
    Deny unaffiliated.html
+
 ```
 
 ### shibuser.txt.post example
@@ -24,10 +27,12 @@ If Any(auth:urn:oid:1.3.6.1.4.1.5923.1.1.1.9, "employee user group");
 If auth:urn:oid:1.3.6.1.4.1.5923.1.1.1.6 eq "admin@somewhere";
    Admin
 Set login:loguser = auth:urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+
 ```
 
 ### shibuser.denied example
 ```
 user1@site
 user2@site
+
 ```

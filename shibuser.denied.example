@@ -1,0 +1,7 @@
+
+#
+# Add one user per line
+# Last line should be an empty line
+#
+user1@site
+user2@site
