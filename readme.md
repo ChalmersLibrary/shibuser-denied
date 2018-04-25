@@ -32,6 +32,11 @@ Set login:loguser = auth:urn:oid:1.3.6.1.4.1.5923.1.1.1.6
 
 ### shibuser.denied example
 ```
+#
+# Add one user per line
+# Last line should be an empty line
+# You can add comments by having a # at the begining of the line.
+#
 user1@site
 user2@site
 
