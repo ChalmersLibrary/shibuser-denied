@@ -5,7 +5,7 @@ file="shibuser.denied"
 output="shibuser.txt"
 
 case $(uname) in
-    Linux)  STAT_CMD="stat -c %Z" ;;
+    Linux)  STAT_CMD="stat -c %Y" ;;
     Darwin) STAT_CMD="stat -f %m" ;;
 esac
 
