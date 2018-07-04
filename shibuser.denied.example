@@ -1,7 +1,0 @@
-#
-# Add one user per line
-# Last line should be an empty line
-# You can add comments by having a # at the begining of the line.
-#
-user1@site
-user2@site

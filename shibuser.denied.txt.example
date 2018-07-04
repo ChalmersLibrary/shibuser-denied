@@ -1,0 +1,12 @@
+#
+# Add one user per line between BEGIN and END
+# You can add comments by having a # at the begining of the line.
+#
+# The shibuser.txt file is regenerated from this file every 5 minutes.
+#
+# BEGIN
+user1@site
+user2@site
+# END
+#
+# Do not edit past this line

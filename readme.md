@@ -1,5 +1,20 @@
 # Simple username blocking of shiboleth users in ezproxy
 
+## What is this?
+
+deniedfilewatcher.sh runs create-shibuser.sh when shibuser.denied is modified and creates a shibuser.txt file according to the format in the [shibboleth documentation at oclc](https://www.oclc.org/support/services/ezproxy/documentation/usr/shibboleth.en.html#shibuser).
+
+## Usage
+
+### With Filewatcher 
+Start deniedfilewatcher.sh at machine startup and it will stat shibuser.denied every 5 seconds.
+
+### With cronjob every 5 minutes
+```
+*/5 * * * * 	cd path to shibuser directory; ./create-shibuser.sh 2>&1
+```
+
+
 ## Files needed
 - shibuser.txt.pre
     - Containing information that needs to at the top of shibuser.txt

@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-denied=`cat shibuser.denied`
 
-# while denied
-# do
-#     echo
-# done
+# Test if file is a dosformatted file
+file shibuser.denied.txt | grep -q CRLF
+if [[ $? != 1 ]]
+then
+    dos2unix -q shibuser.denied.txt
+fi
 
+{
 cat shibuser.txt.pre
-cat shibuser.denied | while read line
+cat shibuser.denied.txt | while read line
 do
     if [[ $line != \#* ]]
     then
@@ -16,3 +18,4 @@ do
     fi
 done
 cat shibuser.txt.post
+} > shibuser.txt
